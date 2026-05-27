@@ -87,23 +87,57 @@
             margin-bottom: 3rem;
             font-size: 2rem;
             color: var(--primary-color);
+            font-weight: bold;
         }
 
-        /* Giới thiệu */
+        /* --- CẬP NHẬT PHẦN GIỚI THIỆU (ABOUT) --- */
         #about {
+            padding: 5rem 0;
+        }
+
+        /* Khối card bọc ngoài giống mục Experience */
+        .about-card {
+            background: #fff;
+            padding: 3.5rem 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             text-align: center;
-            padding: 8rem 0;
+            max-width: 850px; /* Giới hạn độ rộng để text chạy đẹp, không bị quá dài */
+            margin: 0 auto;   /* Căn giữa toàn bộ khối card */
+        }
+
+        /* CSS xử lý ảnh đại diện nằm giữa */
+        .avatar-img {
+            display: block;
+            width: 160px;       /* Độ rộng của ảnh */
+            height: 160px;      /* Chiều cao của ảnh */
+            border-radius: 50%; /* Bo tròn 100% thành hình tròn */
+            object-fit: cover;  /* Giúp ảnh không bị móp méo khi tỉ lệ gốc khác hình vuông */
+            margin: 0 auto 2rem auto; /* Căn giữa ảnh và tạo khoảng cách 2rem với chữ bên dưới */
+            border: 3px solid var(--primary-color); /* Viền xanh đồng bộ tông màu chính */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         #about h1 {
-            font-size: 3rem;
+            font-size: 2.8rem;
             margin-bottom: 1rem;
+            color: #222;
         }
 
         #about h2 {
+            font-size: 1.3rem;
             color: #666;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
         }
+
+        #about p {
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+        }
+        /* -------------------------------------- */
 
         /* Kinh nghiệm */
         .timeline-item {
@@ -113,13 +147,24 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
+        .timeline-item h3 {
+            color: #222;
+            font-size: 1.3rem;
+        }
+
         .timeline-item h4 {
             color: var(--primary-color);
             margin-bottom: 1rem;
+            font-weight: 600;
         }
 
         .timeline-item ul {
             margin-left: 1.5rem;
+            color: #444;
+        }
+
+        .timeline-item li {
+            margin-bottom: 0.5rem;
         }
 
         /* Dự án */
@@ -215,14 +260,18 @@
         </nav>
     </header>
 
-    <section id="about" class="section">
+    <section id="about" class="section bg-light">
         <div class="container">
-            <h1>Hello, I'm Tiến Phú </h1>
+            <div class="about-card">
+                <img src="img1.jpg" alt="Nguyễn Tiến Phú" class="avatar-img">
+                
+                <h1>Hello, I'm Tiến Phú</h1>
                 <p>I am a software developer currently studying at FPT University, passionate about system architecture design (Repository pattern, N-Tier) and solving complex data problems. I aim to build optimized software with high scalability and accurate documentation.</p>
+            </div>
         </div>
     </section>
 
-    <section id="experience" class="section bg-light">
+    <section id="experience" class="section">
         <div class="container">
             <h2 class="section-title">Experience & Education</h2>
             <div class="timeline">
@@ -239,25 +288,19 @@
         </div>
     </section>
 
-    <section id="projects" class="section">
+    <section id="projects" class="section bg-light">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title">Featured Projects</h2>
             <div class="project-grid">
                 <div class="project-card">
                     <h3>MoneyFlow</h3>
-                    <p>This personal finance management application is developed using WPF and .NET. The system allows for budget management, transaction processing, and a visual dashboard display (the UI design eliminates the display of roles according to internal user standards).
-</p>
-                    <div class="tags"><span>C#</span><span>WPF</span><span>.NET</span></div>
+                    <p>This personal finance management application is developed using WPF and .NET. The system allows for budget management, transaction processing, and a visual dashboard display (the UI design eliminates the display of Roles).</p>
+                    <div class="tags"><span>C#</span><span>WPF</span><span>.NET Core</span></div>
                 </div>
                 <div class="project-card">
                     <h3>DevQuery</h3>
-                    <p>This is a technical Q&A platform. I am responsible for system analysis and design, creating database schemas, Use Case diagrams, and writing detailed SRD documents.</p>
+                    <p>This is a technical Q&A platform. I am responsible for system analysis and design, database schema creation, Use Case diagram development, and writing detailed SRD documents.</p>
                     <div class="tags"><span>System Design</span><span>Database</span></div>
-                </div>
-                <div class="project-card">
-                    <h3>ShoeShop</h3>
-                    <p>This is an e-commerce system for retail sales. I am responsible for the shopping cart logic, database connectivity through a safe DB context, and basic front-end interface.</p>
-                    <div class="tags"><span>JSP/Servlets</span><span>Java</span><span>SQL Server</span></div>
                 </div>
             </div>
         </div>
@@ -271,7 +314,6 @@
                 <a href="https://github.com/Relz4869" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
                 <a href="https://linkedin.com/in/your-linkedin-url" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
             </div>
-            
         </div>
     </footer>
 </body>
