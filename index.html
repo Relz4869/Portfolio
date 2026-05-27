@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Tien Phu Nguyen</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Biến màu sắc toàn cục */
+        :root {
+            --primary-color: #0056b3;
+            --text-color: #333;
+            --bg-color: #fff;
+            --bg-light: #f4f7f6;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Header & Nav */
+        header {
+            background: var(--bg-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Các Sections */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .bg-light {
+            background-color: var(--bg-light);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        /* Giới thiệu */
+        #about {
+            text-align: center;
+            padding: 8rem 0;
+        }
+
+        #about h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        #about h2 {
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        /* Kinh nghiệm */
+        .timeline-item {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .timeline-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .timeline-item ul {
+            margin-left: 1.5rem;
+        }
+
+        /* Dự án */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .tags {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tags span {
+            background: var(--bg-light);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        /* Footer & Icons */
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .social-links {
+            margin: 1.5rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .social-links a {
+            color: #fff;
+            font-size: 2rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+            transform: scale(1.1);
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            #about h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Nguyễn Tiến Phú</div>
+            <ul class="nav-links">
+                <li><a href="#about">Introduce</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h1>Hello, I'm Tiến Phú </h1>
+                <p>I am a software developer currently studying at FPT University, passionate about system architecture design (Repository pattern, N-Tier) and solving complex data problems. I aim to build optimized software with high scalability and accurate documentation.</p>
+        </div>
+    </section>
+
+    <section id="experience" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Experience & Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Third-year Student - Software Engineering Major</h3>
+                    <h4>FPT University | Current</h4>
+                    <ul>
+                        <li>Research and apply data structures, algorithms to real-world scenarios.</li>
+                        <li>Team lead for software development, managing source code via Git/GitHub, conducting code reviews, and resolving merge conflicts.</li>
+                        <li>Preparing for the Java Developer internship position.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>MoneyFlow</h3>
+                    <p>This personal finance management application is developed using WPF and .NET. The system allows for budget management, transaction processing, and a visual dashboard display (the UI design eliminates the display of roles according to internal user standards).
+</p>
+                    <div class="tags"><span>C#</span><span>WPF</span><span>.NET</span></div>
+                </div>
+                <div class="project-card">
+                    <h3>DevQuery</h3>
+                    <p>This is a technical Q&A platform. I am responsible for system analysis and design, creating database schemas, Use Case diagrams, and writing detailed SRD documents.</p>
+                    <div class="tags"><span>System Design</span><span>Database</span></div>
+                </div>
+                <div class="project-card">
+                    <h3>ShoeShop</h3>
+                    <p>This is an e-commerce system for retail sales. I am responsible for the shopping cart logic, database connectivity through a safe DB context, and basic front-end interface.</p>
+                    <div class="tags"><span>JSP/Servlets</span><span>Java</span><span>SQL Server</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Connect with me on:</p>
+            <div class="social-links">
+                <a href="mailto:phu.nguyentien17@gmail.com" target="_blank" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://github.com/Relz4869" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/your-linkedin-url" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            
+        </div>
+    </footer>
+</body>
+</html>
